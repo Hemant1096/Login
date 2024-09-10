@@ -21,7 +21,6 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   login(){
-    debugger;
     if(this.usrEmail == 'hemant' && this.usrPassword == 'hemant@123'){
       this.router.navigate(['mainpage']);
     }
