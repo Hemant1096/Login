@@ -11,7 +11,7 @@
 
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button mat-icon-button (click)="sidenav.toggle()" *ngIf="isHandset$ | async">
+      <button mat-icon-button (click)="sidenav.toggle()" *ngIf="isHandset$ | async" class="btn-background">
         <mat-icon>menu</mat-icon>
       </button>
       <span>My Application</span>
