@@ -6,7 +6,7 @@ import { MainpageComponent } from "../mainpage/mainpage.component";
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, MainpageComponent],
+  imports: [FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
