@@ -7,7 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar'; // Import MatToolb
 import { MatListModule } from '@angular/material/list'; // Import MatListModule
 import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
 import { CommonModule } from '@angular/common';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
+import { HomepageComponent } from "../homepage/homepage.component";
 
 @Component({
   selector: 'app-mainpage',
@@ -18,8 +19,9 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatListModule,
     MatIconModule,
     CommonModule,
-    MatTabsModule
-  ],
+    MatTabsModule,
+    HomepageComponent
+],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.css'
 })
