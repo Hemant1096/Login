@@ -2,3 +2,11 @@
     margin: 20px auto;
     max-width: 300px;
   }
+  .button-group {
+    display: flex;
+    gap: 8px; /* Adjust the spacing between buttons as needed */
+  }
+  
+  .button-group button {
+    flex: 1; /* Optional: makes buttons take equal space */
+  }
