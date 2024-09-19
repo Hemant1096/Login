@@ -1,12 +1,17 @@
-.container {
-    margin: 20px auto;
-    max-width: 300px;
-  }
-  .button-group {
-    display: flex;
-    gap: 8px; /* Adjust the spacing between buttons as needed */
-  }
-  
-  .button-group button {
-    flex: 1; /* Optional: makes buttons take equal space */
-  }
+.card-container {
+  display: flex;
+  justify-content: space-between; /* or 'space-around', 'space-evenly', 'center' based on your needs */
+  /*gap: 5px; /* Adds space between the cards */
+}
+.button-group {
+  display: flex;
+  gap: 8px; /* Adjust the spacing between buttons as needed */
+}
+
+.button-group button {
+  flex: 1; /* Optional: makes buttons take equal space */
+}
+.card {
+  flex: 1; /* Allows the cards to grow and shrink evenly */
+  max-width: 300px; /* Optional: limits the width of each card */
+}
