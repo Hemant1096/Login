@@ -1,6 +1,6 @@
 .card-container {
   display: flex;
-  justify-content: space-evenly; /* or 'space-around', 'space-evenly', 'center' based on your needs */
+  justify-content: space-around; /* or 'space-around', 'space-evenly', 'center' based on your needs */
   padding-block: 20px;
 }
 .button-group {
@@ -11,7 +11,13 @@
 .button-group button {
   flex: 1; /* Optional: makes buttons take equal space */
 }
+button:hover{
+  background-color: #A020F0;
+  color: #FFF;
+  transition: 800ms;
+}
 .card {
   flex: 1; /* Allows the cards to grow and shrink evenly */
   max-width: 300px; /* Optional: limits the width of each card */
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
 }
