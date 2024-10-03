@@ -62,14 +62,14 @@
   input:valid ~ label {
     top: -5px;
   } */
-  .form-group i{
+  /* .form-group i{
     position:absolute;
     top:50%;
     right: 10px;
     transform: translateX(-50%);
     color: #ffff;
     font-size: 1.2em;
-  }
+  } */
   p{
     text-align: center;
     color: #fff;

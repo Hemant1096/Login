@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { MainpageComponent } from "../mainpage/mainpage.component";
+
 
 @Component({
   selector: 'app-login',
@@ -28,6 +28,10 @@ export class LoginComponent {
       this.router.navigate(['LoginComponent']);
     }
     // alert("hi " + this.usrEmail + " and your password is " + this.usrPassword);
+  }
+  signup(){
+    debugger;
+    this.router.navigate(['signup']);
   }
 }
 
