@@ -9,6 +9,8 @@ import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
 import { CommonModule } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { HomepageComponent } from "../homepage/homepage.component";
+import { Router } from '@angular/router';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-mainpage',
@@ -29,7 +31,7 @@ export class MainpageComponent implements OnInit {
   isHandset$: Observable<boolean> = of(false);
 
   // Constructor initializes BreakpointObserver
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
 
   // Initialization logic in ngOnInit
   ngOnInit(): void {
@@ -37,6 +39,9 @@ export class MainpageComponent implements OnInit {
       .pipe(
         map(result => result.matches)
       );
+  }
+  logout(){
+    this.router.navigate(['login']);
   }
 }
 

@@ -21,16 +21,24 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   login(){
-    if(this.usrEmail == 'hemant' && this.usrPassword == 'hemant@123'){
-      this.router.navigate(['mainpage']);
+    if(this.usrEmail == '' || this.usrPassword == ''){
+      alert("Please Enter username and Password");
     }
     else{
-      this.router.navigate(['LoginComponent']);
+      if(this.usrEmail == 'hemant' && this.usrPassword == 'hemant@123'){
+        this.router.navigate(['mainpage']);
+      }
+      else{
+        alert("Please Enter correct Username or Password")
+        this.router.navigate(['login']);
+      }
     }
+    
     // alert("hi " + this.usrEmail + " and your password is " + this.usrPassword);
   }
-  signup(){
+  signup(event:Event){
     debugger;
+    event.preventDefault();
     this.router.navigate(['signup']);
   }
 }

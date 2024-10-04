@@ -37,3 +37,7 @@
   margin-top: 5px;
   margin-right: 5px;
  }
+.logout-align {
+  margin-left: auto;
+  cursor: pointer; /* Optional for pointer on hover */
+}

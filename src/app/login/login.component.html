@@ -1,7 +1,7 @@
 <div class="main">
     <div class="container">
       <h2>Login</h2>
-     <form #loginForm="ngForm">
+     <form #loginForm="ngForm" (ngSubmit)="login()">
       <div class="form-group">
         <input type="email" id="txtEmail" [(ngModel)]="usrEmail" name="mail" required>
         <label for="txtEmail">Email</label>
@@ -13,8 +13,8 @@
         <i class="fa fa-trash"></i>
       </div>
       <p><input type="checkbox">Remember Me<a href="#" [innerHTML]="forget"></a></p>
-      <input type="submit" id="btn" value="Login" (click)="login()">
-      <p>Dont't have a account? <a href="#" [innerHTML]="dynamicContent" (click)="signup()"></a></p>
+      <button type="submit" id="btn" value="Login">Login</button>
+      <p>Dont't have a account? <a href="#" [innerHTML]="dynamicContent" (click)="signup($event)"></a></p>
      </form>
     </div>
   </div>
