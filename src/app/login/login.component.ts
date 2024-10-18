@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -18,18 +19,19 @@ export class LoginComponent {
   usrEmail: string = '';
   usrPassword: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private snackBar: MatSnackBar) {}
 
   login(){
     if(this.usrEmail == '' || this.usrPassword == ''){
-      alert("Please Enter username and Password");
+      this.showToast("Please Enter username and Password");
     }
     else{
       if(this.usrEmail == 'hemant' && this.usrPassword == 'hemant@123'){
         this.router.navigate(['mainpage']);
       }
       else{
-        alert("Please Enter correct Username or Password")
+        this.showToast('Please Enter correct Username or Password');
+        // alert("Please Enter correct Username or Password");
         this.router.navigate(['login']);
       }
     }
@@ -41,5 +43,11 @@ export class LoginComponent {
     event.preventDefault();
     this.router.navigate(['signup']);
   }
+  showToast(message: string) {
+    this.snackBar.open(message,'', {
+      duration: 5000, // duration in milliseconds
+      verticalPosition: 'top', // or 'bottom'
+      horizontalPosition: 'right', // 'start', 'center', 'end', 'left', 'right'
+    });
+  }
 }
-
