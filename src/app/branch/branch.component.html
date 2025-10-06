@@ -1,0 +1,79 @@
+<div class="container d-flex justify-content-center align-items-center vh-75">
+  <form class="w-50" (ngSubmit)="onSubmit()" #branchForm="ngForm">
+    
+    <!-- First Textbox -->
+    <div class="mb-3">
+      <label for="txtBranch" class="form-label">Branch</label>
+      <input type="text"
+             class="form-control"
+             id="txtBranch"
+             name="branch"
+             [(ngModel)]="branch"
+             placeholder="Enter branch"
+             required>
+    </div>
+
+    <!-- Radio Buttons -->
+    <div class="mb-3 d-flex justify-content-between">
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               name="option"
+               id="radioTLeft"
+               value="AE"
+               [(ngModel)]="selectedOption"
+               required>
+        <label class="form-check-label" for="radioTLeft">Export Air</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               name="option"
+               id="radioTRight"
+               value="AI"
+               [(ngModel)]="selectedOption"
+               required>
+        <label class="form-check-label" for="radioTRight">Import Air</label>
+      </div>
+    </div>
+<div class="mb-3 d-flex justify-content-between">
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               name="option"
+               id="radioBLeft"
+               value="SE"
+               [(ngModel)]="selectedOption"
+               required>
+        <label class="form-check-label" for="radioBLeft">Export Sea</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               name="option"
+               id="radioBRight"
+               value="SI"
+               [(ngModel)]="selectedOption"
+               required>
+        <label class="form-check-label" for="radioBRight">Import Sea</label>
+      </div>
+    </div>
+    <!-- Second Textbox -->
+    <div class="mb-3">
+      <label for="txtDescription" class="form-label">Financial Year</label>
+      <input type="text"
+             class="form-control"
+             id="txtFinYear"
+             name="FinYear"
+             [(ngModel)]="FinYear"
+             placeholder="Enter Financial Year">
+    </div>
+
+    <!-- Submit Button -->
+     <div class="d-flex justify-content-center align-items-center">
+        <button type="submit" class="btn btn-primary w-20">Submit</button>
+     </div>
+    
+    
+  </form>
+</div>

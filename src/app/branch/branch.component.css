@@ -1,0 +1,10 @@
+.container {
+  min-height: 100vh;
+}
+
+form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}

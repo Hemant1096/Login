@@ -26,7 +26,7 @@ export class LoginComponent {
     }
     else{
       if(this.usrEmail == 'hemant' && this.usrPassword == 'hemant@123'){
-        this.router.navigate(['mainpage']);
+        this.router.navigate(['branch']);
       }
       else{
         alert("Please Enter correct Username or Password")
